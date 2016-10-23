@@ -1,6 +1,7 @@
 #### 1. Downloading and unzipping ####
 
 url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+if(!file.exists("~/R/coursera/ProgAssig_Getting/")){dir.create("~/R/coursera/ProgAssig_Getting/")}
 download.file(fileUrl, destfile="~/R/coursera/ProgAssig_Getting/Dataset.zip")
 unzip(zipfile="~/R/coursera/ProgAssig_Getting/Dataset.zip", exdir="~/R/coursera/ProgAssig_Getting/")
 
@@ -50,4 +51,4 @@ merge_all_select$activityID <- factor(merge_all_select$activityID, labels = acti
 
 merge_all_means <- aggregate(. ~ subjectID + activityID, merge_all_select, mean)
 
-write.table(merge_all_means, "~/R/coursera/ProgAssig_Getting/merge_all_means.txt")
+write.table(merge_all_means, "~/R/coursera/ProgAssig_Getting/merge_all_means.txt", row.names = FALSE)
