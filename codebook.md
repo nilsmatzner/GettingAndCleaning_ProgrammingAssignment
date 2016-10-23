@@ -7,7 +7,8 @@ and the full _descirption_
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 # The R script
-The code of run_analysis.R performs the following steps.<br/>
+The code of run_analysis.R performs the following steps.
+
 1. Downloading and unzipping files (note that my home directory has been used)
 2. Reading data sets into R
 3. Merging dataset + adding columnnames
